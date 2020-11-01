@@ -1,4 +1,4 @@
-# Archimedes assessment
+# Archimedes assignment
 
 You can choose from three options to run this project.
 
