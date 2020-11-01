@@ -18,7 +18,7 @@ public class OutputRepositoryImpl implements OutputRepository {
 
     @Override
     public void save(Output output) throws IOException {
-        mapper.writerFor(Output.class).with(createSchema()).writeValue(new File("target/output.csv"), output);
+        mapper.writerFor(Output.class).with(createSchema()).writeValue(new File(OUTPUT_PATH), output);
     }
 
     private CsvSchema createSchema() {

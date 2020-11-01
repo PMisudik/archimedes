@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static sk.misudik.archimedes.repository.OutputRepository.OUTPUT_PATH;
 
 class OutputRepositoryImplTest {
 
@@ -22,7 +23,7 @@ class OutputRepositoryImplTest {
         output.setOperator("Vodafone");
         output.setRiskScore(1.0f);
         repository.save(output);
-        var file = Paths.get("target", "output.csv").toFile();
+        var file = Paths.get(OUTPUT_PATH).toFile();
         assertTrue(file.exists());
     }
 }

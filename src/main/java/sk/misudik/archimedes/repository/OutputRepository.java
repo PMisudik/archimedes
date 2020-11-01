@@ -6,6 +6,8 @@ import java.io.IOException;
 
 public interface OutputRepository {
 
+    String OUTPUT_PATH = "target/output.csv";
+
     void save(Output output) throws IOException;
 
 }

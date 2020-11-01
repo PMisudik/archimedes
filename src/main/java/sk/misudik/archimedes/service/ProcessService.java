@@ -1,10 +1,9 @@
 package sk.misudik.archimedes.service;
 
-import sk.misudik.archimedes.model.input.calls.Calls;
-import sk.misudik.archimedes.model.input.operators.Operators;
+import sk.misudik.archimedes.model.output.Output;
 
 public interface ProcessService {
 
-    void process(Calls calls, Operators operators);
+    Output process();
 
 }
