@@ -19,10 +19,11 @@ public class OutputRepositoryImpl implements OutputRepository {
     }
 
     @Override
-    public void save(Outputs outputs) throws IOException {
+    public Outputs save(Outputs outputs) throws IOException {
         ArrayNode arrayNode = mapper.createArrayNode();
         outputs.getData().forEach(arrayNode::addPOJO);
         mapper.writerFor(JsonNode.class).with(createSchema()).writeValue(new File(OUTPUT_PATH), arrayNode);
+        return outputs;
     }
 
     private CsvSchema createSchema() {

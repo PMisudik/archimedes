@@ -1,9 +1,11 @@
 package sk.misudik.archimedes.service;
 
-import sk.misudik.archimedes.model.output.Output;
+import sk.misudik.archimedes.model.output.Outputs;
+
+import java.io.IOException;
 
 public interface ProcessService {
 
-    Output process();
+    Outputs process() throws IOException;
 
 }

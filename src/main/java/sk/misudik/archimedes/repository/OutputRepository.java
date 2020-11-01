@@ -8,6 +8,6 @@ public interface OutputRepository {
 
     String OUTPUT_PATH = "target/output.csv";
 
-    void save(Outputs outputs) throws IOException;
+    Outputs save(Outputs outputs) throws IOException;
 
 }
