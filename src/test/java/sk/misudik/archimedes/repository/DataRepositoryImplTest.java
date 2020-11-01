@@ -1,13 +1,14 @@
 package sk.misudik.archimedes.repository;
 
 import org.junit.jupiter.api.Test;
+import sk.misudik.archimedes.repository.impl.DataRepositoryImpl;
 
 import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-class RepositoryTest {
+class DataRepositoryImplTest {
 
     private final DataRepository repository = new DataRepositoryImpl();
 
