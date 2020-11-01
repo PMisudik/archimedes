@@ -4,16 +4,25 @@ import org.junit.jupiter.api.Test;
 import sk.misudik.archimedes.model.output.Output;
 import sk.misudik.archimedes.repository.impl.OutputRepositoryImpl;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import java.io.IOException;
+import java.nio.file.Paths;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class OutputRepositoryImplTest {
 
     private OutputRepository repository = new OutputRepositoryImpl();
 
     @Test
-    void save() {
+    void save() throws IOException {
         Output output = new Output();
+        output.setDate("2020-05-08");
+        output.setId("20");
+        output.setNumber("+42191068925");
+        output.setOperator("Vodafone");
+        output.setRiskScore(1.0f);
         repository.save(output);
-        assertNotNull(this.getClass().getClassLoader().getResourceAsStream("data/output.json"));
+        var file = Paths.get("target", "output.csv").toFile();
+        assertTrue(file.exists());
     }
 }
