@@ -1,12 +1,10 @@
 package sk.misudik.archimedes.model.input.calls;
 
-import java.util.List;
-
 public class Call {
 
     private String type;
     private String id;
-    private List<Attribute> attributes;
+    private Attribute attributes;
 
     public Call() {
     }
@@ -27,11 +25,11 @@ public class Call {
         this.id = id;
     }
 
-    public List<Attribute> getAttributes() {
+    public Attribute getAttributes() {
         return attributes;
     }
 
-    public void setAttributes(List<Attribute> attributes) {
+    public void setAttributes(Attribute attributes) {
         this.attributes = attributes;
     }
 }
