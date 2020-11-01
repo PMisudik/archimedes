@@ -7,3 +7,9 @@ You can choose from three options to run this project.
 3. Run tests in src/test/java folder
 
 Output is in the target folder
+
+# Additional improvements
+If I had more time (I tried to implement this in given 2 hours range),
+I would create more exhausting test suite.
+It would mainly be in the ProcessServiceImpl test, where I would also check all the
+values in the outputs and validate them.
