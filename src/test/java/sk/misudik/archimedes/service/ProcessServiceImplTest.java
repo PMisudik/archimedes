@@ -12,7 +12,7 @@ class ProcessServiceImplTest {
 
     @Test
     void processTest() {
-        new ProcessServiceImpl(new DataRepositoryImpl(), new OutputRepositoryImpl()).process();
+        var output = new ProcessServiceImpl(new DataRepositoryImpl(), new OutputRepositoryImpl()).process();
         assertNotNull(this.getClass().getClassLoader().getResourceAsStream(OUTPUT_PATH));
     }
 
