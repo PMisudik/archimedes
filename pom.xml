@@ -8,5 +8,22 @@
     <artifactId>archimedes</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <jackson.version>2.11.3</jackson.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.dataformat</groupId>
+            <artifactId>jackson-dataformat-csv</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
